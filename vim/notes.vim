@@ -345,6 +345,57 @@
 " let Fn = { a,b -> a.b }
 " let FFn = call(Fn, [1,2])
 " echo FFn
-let Fn = { a,b -> a.b }
-let FFn = function(Fn,[1])
-echo FFn(2)
+" let Fn = { a,b -> a.b }
+" let FFn = function(Fn,[1])
+" echo FFn(2)
+" pathogen -- inject paths in vim's runtimepath like PATH (use file#func
+" functions)
+" help tags
+" help mark
+" '. == normal gi
+" tags
+" Using tags makes it easier to jump to certain parts of your programs. First run ctags from the UNIX command line on your source files (e.g., ctags prog.c or ctags -R to recurse) to generate a "tags" file, then use these while editing your source files:
+" :tag TAB            - list the known tags
+" :tag function_name  - jump to that function
+" ctrl-t   - goes to previous spot where you called :tag
+" ctrl-]   - calls :tag on the word under the cursor        
+" :ptag    - open tag in preview window (also ctrl-w })
+" :pclose  - close preview window
+" use <C-v>, <C-k> for recording normal/vim keybindings.
+" use <C-e>, <C-y> for padded move.
+" use <C-m> for newline in i-mode.
+" surrounds: ys<select><x>, yS<select><x> (indents), cs<x><y>, ds<x>. Use open braces for padding (ys/yS commands), y{ss/SS} for selecting whole line.
+" to create fixup! commit cf w.r.t. the faulty commit, then :Glog and ri on the faulty commit, replace pick -> fixup in front of the fixup commit.
+" make sure both faulty and fixup commits are visible in the rebase window. 
+" <C-{/}>, :buf <n> to move faster. K for definitions.=to indent.
+" ce to amend staged hunks w/o changing previous commit (alt - ca). Prefer cc instead of C for committing staged hunks.
+" Gedit# to go back from log menu to file. c{open/close} for commit window.
+" folds: <n>zf,zo,zc,zd,zn,zN,fold,foldopen,foldclose,zE. {-x,+y} - relative selection.
+" T,F to search backwards. setlocal for local settings.
+" *map -- *noremap -- *unmap (im -- in -- iu, nm -- nn -- nun, vm -- vn -- vu). See map-modes for more.  
+" au FileType fortran let maplocalleader="`" 
+" use <buffer> in mappings to define those mappings for the current buffer only, e.g., nn <buffer><localleader>Q dd
+" in case of similar mappings, vim goes with the more "specific" one (shadowing).
+" g_ and _ for start/end of line.
+" D to delete till end of line
+" g; to jump back -- gi for last insert
+" [{ for moving to enclosing scope's start
+" <co> <ci> for bk,fw.
+" q/
+" highlight enclosing tags -- use v{i,a}t
+" CTRL-] while the cursor is on a keyword (such as a function name) to jump to
+" javascriptreact
+" CAPSLOCK -> ESC
+" zR zM
+" zz
+" c-o i mode
+" *, #
+" The ‘target’ branch is the one that is active when you run git merge. Or in
+" other words, it’s the HEAD branch. The ‘merge’ branch is the one that is named
+" in the git merge command.
+" target == //2
+" merge == //3
+" For `git rebase -i master`, //2 is master, and //3 is the branch we were on
+" before.
+" map capslock to esc 
+" systemctl start,status docker
