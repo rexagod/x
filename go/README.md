@@ -13,7 +13,6 @@
  /____/____/____/____/____/____/____/____/____/
 /____/____/____/____/____/____/____/____/____/ 
 ```
-
 - Package name is the same as the last element of the package statement.
 - Exported names must be capitalized.
 - Types come after the variable name. In case of multiple parameters having same types, they can be omitted from the function signature except for the last one.
